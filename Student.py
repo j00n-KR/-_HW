@@ -1,7 +1,9 @@
 class Student:
-    def __init__(self, name, age, kor, eng, math):
+    def __init__(self, name, age, attendence, in_school, kor, eng, math):
         self.name = name
         self.age = age
+        self.attendence = attendence
+        self.in_school = in_school
         self.score = {'kor' : kor, 'eng' : eng, 'math' : math}
     
     def __str__(self):
@@ -13,6 +15,12 @@ class Student:
     def get_age(self):
         return self.age
     
+    def get_attendence(self):
+        return self.attendence
+
+    def get_in_school(self):
+        return self.in_school
+    
     def get_score_list(self):
         return self.score
 
@@ -22,6 +30,12 @@ class Student:
     def set_score(self,key,value):
         self.score[key] = value
         return self.score[key]
+    
+    def set_attendence(self,num):
+        self.attendence = num
+        
+    def set_in_school(self,num):
+        self.in_school = num
 
 '''
 A = Student('황준하',25, 90, 80, 50)

@@ -54,7 +54,7 @@ class Classroom:
             return str("해당 과목은 이미 존재합니다.")
         else: 
             for student in self.classroom:
-                student.set_score(subject, random.randint(0,100))
+                student.set_score(subject, random.randint(0,101))
             return '\n'.join(str(student) for student in self.classroom)
         
     def exam_change(self,subject,name,score):
@@ -79,7 +79,7 @@ D = Student('황준하',25, 60, 40, 3)
 student = [A,B,C,D]
 
 C = Classroom(student)
-print(C.exam('kor'))
+print(C.exam('중국어'))
 print(C.subject())
 print(C.exam_change('중국어','황준하',30))
 

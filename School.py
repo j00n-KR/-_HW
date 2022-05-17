@@ -14,7 +14,7 @@ class School:
         return '\n'.join(str(classroom) for classroom in self.school)
 
     def enroll(self,Classroom):
-        for classroom in Classroom.classroom:
+        for classroom in Classroom:
             self.school.append(classroom)
             
     def kor_mean(self):
